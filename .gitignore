@@ -134,5 +134,4 @@ dist
 .pnp.*
 
 #visual studio
-.vs/*
-package.json
+.vs

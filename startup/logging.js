@@ -4,9 +4,13 @@ require("express-async-errors");
 const config = require("config");
 
 module.exports = function () {
-  //logging
   winston.add(
-    new winston.transports.File({ filename: "logfile.log", level: "info" })
+    new winston.transports.File({ filename: "logfile.log", level: "error" }),
+    new winston.transports.Console({
+      level: "info",
+      colorize: true,
+      prettyPrint: true,
+    })
   );
 
   winston.add(
@@ -16,7 +20,6 @@ module.exports = function () {
     })
   );
 
-  //exception handling
   winston.exceptions.handle(
     new winston.transports.File({
       filename: "unhandledExceptions.log",
@@ -28,4 +31,7 @@ module.exports = function () {
   process.on("unhandledRejection", (ex) => {
     throw ex;
   });
+
+  console.log(config.get("name"));
+  console.log(config.get("jwtPrivateKey"));
 };

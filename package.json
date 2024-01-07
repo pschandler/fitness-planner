@@ -1,0 +1,40 @@
+{
+  "name": "fitness-planner",
+  "version": "1.0.0",
+  "description": "Create personal workouts or retrieve system generated workouts",
+  "main": "index.js",
+  "scripts": {
+    "dev": "set NODE_ENV=development& nodemon index.js",
+    "release": "set NODE_ENV=production& nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pschandler/fitness-planner.git"
+  },
+  "keywords": [
+    "node.js",
+    "react",
+    "mongodb",
+    "mongoose",
+    "express"
+  ],
+  "author": "Patrick Schandler",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pschandler/fitness-planner/issues"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "config": "^3.3.9",
+    "express": "^4.18.2",
+    "express-async-errors": "^3.1.1",
+    "helmet": "^7.1.0",
+    "joi": "^17.11.0",
+    "joi-objectid": "^4.0.2",
+    "jsonwebtoken": "^9.0.2",
+    "lodash": "^4.17.21",
+    "mongoose": "^8.0.3",
+    "winston": "^3.11.0",
+    "winston-mongodb": "^5.1.1"
+  }
+}
