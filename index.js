@@ -8,8 +8,9 @@ require("./startup/db")();
 require("./startup/config")();
 require("./startup/validation")();
 require("./startup/middlewares")(app);
+require("./startup/production")(app);
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   winston.info(`app listening on port ${PORT}`);
 });
